@@ -1,12 +1,13 @@
 import {getPosts} from "./posts.js";
 
 const postsEl = document.querySelector('#posts');
-const API_URL = "https://bkpybdqjxmrgxwaqmxqe.supabase.co/rest/v1"
-const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJrcHliZHFqeG1yZ3h3YXFteHFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0MjU5MTgsImV4cCI6MjAyNjAwMTkxOH0.1kLMTU1ZYusSamYBWHqs--GDYU-NGeYrX7qy4bNLTZU"
-
 
 getPosts()
-    .forEach(item => showPostsWebView(item))
+    .then(data => {
+        console.log(data)
+        data.forEach( item => console.log(item))
+        data.forEach(item => showPostsWebView(item))
+    })
 
 function showPostsWebView(item = {}) {
     // console.log("works")

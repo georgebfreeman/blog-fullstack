@@ -8,8 +8,12 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "devDependencies": {
+   "devDependencies": {
+    "daisyui": "^4.12.10",
     "tailwindcss": "^3.4.13",
     "vite": "^5.4.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4"
   }
 }
