@@ -12,6 +12,13 @@ export async function getPosts() {
     return data;
 }
 
+export async function addPost(newPost = {}){
+    // TODO: make this work (that is: when I click the submit post, it adds a new post to your supabase database) — ref: see my `prompt.md` file
+    // uses the supabase library to add a new post
+    // return new post if successfully
+    // return an error and the type if couldn't to supabase
+}
+
 /**
  * Deletes a post by its ID
  *
