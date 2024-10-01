@@ -24,5 +24,6 @@ function showPostsWebView(item = {}) {
                     </div>
                 </div>
     `
+
     postsEl.appendChild(div);
 }

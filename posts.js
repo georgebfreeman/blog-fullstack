@@ -8,6 +8,7 @@ export async function getPosts() {
     let {data, error} = await supabase
         .from('f24_posts')
         .select('*')
+
     return data;
 }
 
