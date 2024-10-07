@@ -34,3 +34,11 @@ graph TD
     class HTML,TailwindCSS,DaisyUI,JavaScript frontend;
     class Supabase backend;
 ```
+
+### Features
+- [x] All readers to see all posts
+- [ ] All users to add a new post - (TODO v1)
+- [ ] All users to delete a post
+    - [ ] When hits "delete" button from each post (frontend)
+    - [ ] remove the post from supabase (backend)
+    - [ ] refresh the page (frontend)
