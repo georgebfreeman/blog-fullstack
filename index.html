@@ -23,7 +23,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16" />
+                            d="M4 6h16M4 12h8m-8 6h16"/>
                 </svg>
             </div>
             <ul
@@ -77,6 +77,12 @@
         <form class="card bg-base-100 shadow-xl" id="add-post">
             <div class="card-body">
                 <div class="form-control">
+                    <label class="label" for="datetime">
+                        <span class="label-text">Date and Time</span>
+                    </label>
+                    <input type="datetime-local" id="datetime" placeholder="Enter Date and Time Here" class="input input-bordered" required>
+                </div>
+                <div class="form-control">
                     <label class="label" for="title">
                         <span class="label-text">Title</span>
                     </label>
@@ -86,13 +92,15 @@
                     <label class="label" for="author">
                         <span class="label-text">Author</span>
                     </label>
-                    <input type="text" id="author" placeholder="Enter author name" class="input input-bordered" required>
+                    <input type="text" id="author" placeholder="Enter author name" class="input input-bordered"
+                           required>
                 </div>
                 <div class="form-control">
                     <label class="label" for="content">
                         <span class="label-text">Content</span>
                     </label>
-                    <textarea id="content" placeholder="Write your blog post here" class="textarea textarea-bordered h-24" required></textarea>
+                    <textarea id="content" placeholder="Write your blog post here"
+                              class="textarea textarea-bordered h-24" required></textarea>
                 </div>
                 <div class="form-control mt-6">
                     <button id="submit" class="btn btn-primary">Submit Post</button>
