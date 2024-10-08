@@ -12,7 +12,6 @@ export async function getPosts() {
     return data;
 }
 
-
 /**
  * Deletes a post by its ID
  *
@@ -32,7 +31,6 @@ export function deletePost(id) {
 export function updatePost(id, content) {
     return `updating post with ${id}`
 }
-
 
 // Update addPost function with functionality to add to supabase
 export async function addPost(newPost = {}) {

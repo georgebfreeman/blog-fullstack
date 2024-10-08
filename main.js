@@ -5,10 +5,14 @@ const postsEl = document.querySelector('#posts');
 
 getPosts()
     .then(data => {
-        console.log(data)
-        data.forEach(item => console.log(item))
+        // console.log(data)
+        // data.forEach( item => console.log(item))
         data.forEach(item => showPostsWebView(item))
     })
+
+// **Minimum Viable Solution**, MVS (i.e.: the simplest "correct" thing that solves the problem)
+// When I click the delete button
+// I want it to log "this works, with the ID" in the console of my browser
 
 function showPostsWebView(item = {}) {
     // console.log("works")
@@ -21,7 +25,7 @@ function showPostsWebView(item = {}) {
                         <p>${item['content']}</p>
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Read More</button>
-                            <button class="btn btn-error">Delete</button>
+                            <button class="btn btn-error" onclick="handleDelete( ${item['id']} )">Delete</button>
                         </div>
                     </div>
                 </div>
