@@ -21,6 +21,7 @@ function showPostsWebView(item = {}) {
                         <p>${item['content']}</p>
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Read More</button>
+                            <button class="btn btn-error">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -42,10 +43,9 @@ function renderPost(post) {
    `
 }
 
-//
 // Function to update the posts section
 async function updatePosts() {
-    const postsContainer = document.getElementById('posts')
+    const postsContainer = document.querySelector('#posts')
     try {
         const posts = await getPosts()
         postsContainer.innerHTML = posts.map(renderPost).join('')
@@ -70,28 +70,24 @@ form.addEventListener('submit', (e) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     //    console.log(form)
-    const submitButton = document.getElementById('submit')
+    const submitButton = document.querySelector('#submit')
 
 //      console.log(submitButton)
 
-    form.addEventListener('submit', async (e) => {
+    document.querySelector('#add-post').addEventListener('submit', async (e) => {
         e.preventDefault()
 
 //     console.log(form.addEventListener('submit', async (e))
-        const formData = {
-            date: document.getElementById('datetime').value,
-            title: document.getElementById('title').value,
-//        console.log(title: document.getElementById('title').value,)
-            author: document.getElementById('author').value,
-//        console.log( author: document.getElementById('author').value )
-            content: document.getElementById('content').value
-//        console.log( content: document.getElementById('content').value )
+        const newPost = {
+            date: document.querySelector('#datetime').value,
+            title: document.querySelector('#title').value,
+            author: document.querySelector('#author').value,
+            content: document.querySelector('#content').value
         }
-
 
         try {
             submitButton.disabled = true
-                 await addPost(formData)
+                 await addPost(newPost)
                  form.reset()
               await updatePosts()
         } catch (error) {
@@ -105,4 +101,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // // Initial load of posts
     updatePosts()
 });
-          //  console.log(formData)
+
