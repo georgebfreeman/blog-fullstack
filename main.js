@@ -34,30 +34,30 @@ function showPostsWebView(item = {}) {
     postsEl.appendChild(div);
 }
 
-// Function to render a single post
-function renderPost(post) {
-    return `
-     <div class="card bg-base-100 shadow-xl mb-4">
-       <div class="card-body">
-         <h3 class="text-xl font-semibold">${post.title}</h3>
-         <p class="text-sm text-neutral-content">By ${post.author}</p>
-         <p class="mt-2">${post.content}</p>
-       </div>
-     </div>
-   `
-}
-
-// Function to update the posts section
-async function updatePosts() {
-    const postsContainer = document.querySelector('#posts')
-    try {
-        const posts = await getPosts()
-        postsContainer.innerHTML = posts.map(renderPost).join('')
-    } catch (error) {
-        console.error('Error fetching posts:', error)
-        postsContainer.innerHTML = '<p class="text-error">Error loading posts</p>'
-    }
-}
+// // Function to render a single post
+// function renderPost(post) {
+//     return `
+//      <div class="card bg-base-100 shadow-xl mb-4">
+//        <div class="card-body">
+//          <h3 class="text-xl font-semibold">${post.title}</h3>
+//          <p class="text-sm text-neutral-content">By ${post.author}</p>
+//          <p class="mt-2">${post.content}</p>
+//        </div>
+//      </div>
+//    `
+// }
+//
+// // Function to update the posts section
+// async function updatePosts() {
+//     const postsContainer = document.querySelector('#posts')
+//     try {
+//         const posts = await getPosts()
+//         postsContainer.innerHTML = posts.map(renderPost).join('')
+//     } catch (error) {
+//         console.error('Error fetching posts:', error)
+//         postsContainer.innerHTML = '<p class="text-error">Error loading posts</p>'
+//     }
+// }
 
 // Main initialization
 const form = document.querySelector('#add-post')
