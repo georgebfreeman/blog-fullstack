@@ -9,11 +9,25 @@
 </head>
 <body>
 
+<script type="module">
+      import {deletePost} from "./posts.js";
+      window.deletePost = deletePost
+</script>
+
 <script>
     // when this function is used,
     // it should accept the ID of the post
+    import {deletePost} from "./posts.js";
+
     function handleDelete(postId) {
-        console.log(`deleting ID: ${postId}`)
+        // TO DO: implement this function so that it deletes any ID that we click from supabase
+        // for inspiration, see: https://supabase.com/docs/reference/javascript/delete
+        // hint: first start with outline how you will solve this problem
+        // console.log(`deleting ID: ${postId}`)
+        console.log(
+            deletePost(postId)
+        )
+
     }
 </script>
 
