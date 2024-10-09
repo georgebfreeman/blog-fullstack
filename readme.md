@@ -42,5 +42,5 @@ graph TD
     - [x] When hits "delete" button from each post (frontend)
     - [ ] remove the post from supabase (backend)
     - [x] **Minimum Viable Solution**, MVS (i.e.: the simplest "correct" thing that solves the problem)
-    - [ ] Iterate on our MVS, and make it work for real
-    - [ ] refresh the page (frontend)
+    - [ ] Iterate on our MVS, and make it work for real - TODO (v2)
+    - [x] refresh the page (frontend)

@@ -20,7 +20,7 @@ function showPostsWebView(item = {}) {
     div.innerHTML = `
         <div class="card bg-base-100 shadow-xl">
                     <div class="card-body">
-                        <h3 class="card-title">${item['title']}</h3>
+                        <h3 class="card-title">(${item['id']}) ${item['title']}</h3>
                         <p class="text-gray-600">Published on: ${item['publishedOn']} by ${item['author']}</p>
                         <p>${item['content']}</p>
                         <div class="card-actions justify-end">
