@@ -19,8 +19,6 @@ export async function getPosts() {
  */
 export async function deletePost(id) {
     try {
-        // console.log(`deleting post id ${id}`)
-
         const response = await supabase
               .from('posts')
               .delete()
