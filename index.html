@@ -20,22 +20,26 @@
 
 
     function handleDelete(postId) {
-        // TO DO: implement this function so that it deletes any ID that we click from supabase
-        // for inspiration, see: https://supabase.com/docs/reference/javascript/delete
-        // hint: first start with outline how you will solve this problem
-        // console.log(`deleting ID: ${postId}`)
         const confirmDelete = prompt(`Do you really want to delete Post #${postId}, Enter "Y" to delete`)
 
         // console.log(confirmDelete);
 
-        if (confirmDelete === "Y"){
-            // do the delete stuff
-            console.log(
-                deletePost(postId)
-            )
+        if (confirmDelete === "Y") {
 
-            alert(`Post #${postId} is now deleted`)
-            window.location.reload()
+                deletePost(postId)
+                    .then(response => {
+
+                     if(!response.error){
+                         alert(response.statusText)
+                         window.location.reload()
+
+                     } else {
+                         alert('THERE WAS AN ERROR! Please try later...')
+                     }
+
+                    })
+            // alert(`Post #${postId} is now deleted`)
+            // window.location.reload()
         } else {
             alert("OK, delete canceled.")
         }

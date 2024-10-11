@@ -17,8 +17,30 @@ export async function getPosts() {
  *
  * @param id
  */
-export function deletePost(id) {
-    return `deleting post with ${id}`
+export async function deletePost(id) {
+    try {
+        // console.log(`deleting post id ${id}`)
+
+        const response = await supabase
+              .from('posts')
+              .delete()
+              .eq('id', id)
+
+        // return response
+        // { "error": null, "data": null, "count": null, "status": 204, "statusText": "" }
+        // console.log(response)
+
+        if(response.error){
+            return {error: response.error, statusText: null}
+        }
+
+        return {error: null, statusTet: `${id} successfully deleted`}
+
+    } catch (e) {
+        console.error(`There was an error: ${e.message}`)
+    }
+
+    // return `deleting post with ${id}`
 }
 
 /**
