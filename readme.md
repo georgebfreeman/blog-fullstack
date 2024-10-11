@@ -43,4 +43,19 @@ graph TD
     - [ ] remove the post from supabase (backend)
     - [x] **Minimum Viable Solution**, MVS (i.e.: the simplest "correct" thing that solves the problem)
     - [ ] Iterate on our MVS, and make it work for real - TODO (v2)
+           - [x] Iterate on our MVS, and make it work for real - TODO (v2)
     - [x] refresh the page (frontend)
+    - [ ] Create the Data Model for my Blog app - TODO (v3), _before working on this, you should have completed: https://docs.ulem.org/doc/building-a-full-stack-blog-with-javascript-and-supabase-implementing-post-deletion-R0e7GiW7TS_
+        - [ ] Create a draft of the data model (with Ai-assistance) 
+        - [ ] Create the respective in Supabase (be sure the tables in lowercase and the columns are snake_cased)
+        - [ ]  Generate and populate your tables with your generated mock data
+        - [ ] Test and share your API (with the public link on slack)
+I'm building a blog the backend is powered by Supabase using PostgreSQL
+your task is to design my data model, draw it in mermaid
+---
+I'm building a travel app powered by Supabase using PostgreSQL
+The features:
+- guest can add their favorite locations
+- guest see the future weather at their spots
+- guest can follow friends on the app
+Your task is to design my data model, draw it in mermaid
